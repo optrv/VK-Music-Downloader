@@ -98,10 +98,10 @@ def main():
 
     artist = args.artist
     title = args.title
+    sort = args.sort
 
     if args.show == True:
-        show_tracks(artist, tracks, path)
-
+        show_tracks(artist, tracks, sort)
     else:
         download_tracks(artist, title, tracks, path)
 
