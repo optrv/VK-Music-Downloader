@@ -5,7 +5,6 @@ import sys
 import vk
 import urllib
 
-
 # Print the list of tracks sorted by artist / adding date
 def show_tracks(artist, tracks, sort):
     artist_title = []
@@ -96,7 +95,6 @@ def main():
     path = args.path
     if path is None:
         path = "Downloads"
-
 
     artist = args.artist
     title = args.title
