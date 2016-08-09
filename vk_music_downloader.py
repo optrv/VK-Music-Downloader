@@ -32,12 +32,12 @@ def download_tracks(artist, title, tracks, path):
         os.makedirs(path)
     if artist is None and title is None:
         confirm = input("It seems you want to DOWNLOAD ALL THE TRACKS! Are you SURE? (Y / N)")
-        if confirm == 'y':
+        if confirm.lower() == 'y':
             for track in tracks['items']:
                 url = track['url']
             print('Downloading: {} - {}'.format(track['artist'], track['title']))
             urllib.request.urlretrieve(url, path + '/' + track['artist'] + ' - ' + track['title'] + ".mp3")
-        if confirm == 'n':
+        if confirm.lower() == 'n':
             sys.exit("Please, specify the arguments and try again!")
         else:
             sys.exit("It seems like you didn't choose YES.\nPlease, specify the arguments and try again!")
